@@ -1,10 +1,7 @@
 import logging
-import sys
 from market_maker.ws.ws_thread import BitMEXWebsocket
-from time import sleep
 
-i = "XBTUSD"
-
+instruments = ["XBTUSD"]
 
 if __name__ == '__main__':
     # create console handler and set level to debug
@@ -16,15 +13,16 @@ if __name__ == '__main__':
     # add formatter to ch
     ch.setFormatter(formatter)
     logger.addHandler(ch)
-    ws = BitMEXWebsocket()
 
+    ws = BitMEXWebsocket()
     ws.logger = logger
     # ws.connect("https://testnet.bitmex.com/api/v1")
-    ws.connect("https://www.bitmex.com/api/v1/", i, False)
+    # ws.connect("https://www.bitmex.com/api/v1/", i, False)
+    ws.connect("https://www.bitmex.com/api/v1/", instruments[0], False)
 
     # print(ws.get_instrument(i))
-    while ws.ws.sock.connected:
+    # while ws.ws.sock.connected:
         # print(ws.get_ticker(i))
         # print(json.dumps(ws.data.get('trade'), indent=2))
         # print(str(len(ws.data.get('trade')))+","+str(sys.getsizeof(ws.data)))
-        sleep(10)
+        # sleep(1)

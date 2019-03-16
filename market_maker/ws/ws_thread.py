@@ -21,6 +21,7 @@ with hooks():  # Python 2/3 compat
 
 OrderBookL2_25 = 'orderBookL2_25'
 Trade = 'trade'
+FILE_NAME = "data.csv"
 
 # Connects to BitMEX websocket for streaming realtime data.
 # The Marketmaker still interacts with this as if it were a REST Endpoint, but now it can get
@@ -38,6 +39,7 @@ class BitMEXWebsocket():
         self.logger = logging.getLogger('root')
         self.__reset()
         self.orderbook_recorder = []
+        self.f = open(FILE_NAME, "w")
 
     def __del__(self):
         self.exit()
@@ -216,12 +218,16 @@ class BitMEXWebsocket():
         '''Handler for parsing WS messages.'''
         message = json.loads(message)
 
-        a = convert(message)
+        message_data = convert_data(message)
+        msg = convert_message(message, message_data)
 
-        if a is not None:
-            self.logger.info(a.display())
-            self.orderbook_recorder.append(a)
-
+        if msg is not None:
+            if isinstance(msg, OrderBook):
+                info = msg.__str__()
+            else:
+                info = json.dumps(message)
+            self.logger.info(info)
+            self.f.write(info + "\n")
         # self.logger.debug(json.dumps(message, indent=2))
 
         table = message['table'] if 'table' in message else None
@@ -336,26 +342,59 @@ def findItemByKeys(keys, table, matchData):
             return item
 
 
-def convert(message):
-    if message['table'] == OrderBookL2_25:
-        return OrderbookData(message['table'], message['action'], message['data'])
+def convert_message(message, message_data):
+    if 'table' in message:
+        if message['table'] == OrderBookL2_25:
+            return OrderBook(message['table'], message['action'], message_data)
+        if message['table'] == Trade:
+            return message
     return None
 
 
-class OrderbookData:
-    def __init__(self, table: str, action: str, data: list):
-        self.t = datetime.datetime.utcnow()
+def convert_data(message):
+    if 'table' in message and message['table'] == OrderBookL2_25 and "data" in message:
+        data_obj = []
+        for obj in message['data']:
+            if "price" in obj:
+                data_obj.append(OrderBookData(obj['symbol'], obj['id'], obj['side'], obj['size'], obj['price']))
+            else:
+                data_obj.append(OrderBookData(obj['symbol'], obj['id'], obj['side'], obj['size']))
+        return data_obj
+    return None
+
+
+class OrderBook:
+    def __init__(self, table, action, message_data):
+        self.time = datetime.datetime.utcnow()
         self.table = table
         self.action = action
-        self.data = data
+        self.message_data = message_data
 
-    def display(self):
-        str_list = ["\n"]
-        str_list.append("time:"+str(self.t)+"\n")
-        str_list.append("table:" + self.table+"\n")
-        str_list.append("action:" + self.action+"\n")
-        for d in self.data:
-            str_list.append(str(d)+"\n")
+    def __str__(self):
+        str_list = ["time," + str(self.time) + "\n",
+                    "table," + self.table + "\n",
+                    "action," + self.action + "\n"]
+        for d in self.message_data:
+            str_list.append(d.__str__() + "\n")
+        return ''.join(str_list)
+
+
+class OrderBookData:
+    def __init__(self, symbol, id, side, size, price=None):
+        self.symbol = symbol
+        self.id = id
+        self.side = side
+        self.size = size
+        self.price = price
+
+    def __str__(self):
+        str_list = ["symbol," + str(self.symbol) + ",,",
+                    "id," + str(self.id) + ",,",
+                    "side," + str(self.side) + ",,",
+                    "size," + str(self.size)]
+        if self.price is not None:
+            str_list.append(",,price," + str(self.price))
+
         return ''.join(str_list)
 
 
