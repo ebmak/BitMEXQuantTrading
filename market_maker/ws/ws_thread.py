@@ -222,13 +222,14 @@ class BitMEXWebsocket():
         msg = convert_message(message, message_data)
 
         if msg is not None:
-            if isinstance(msg, OrderBook):
-                info = msg.__str__()
-            else:
-                info = json.dumps(message)
-            self.logger.info(info)
+            #if isinstance(msg, OrderBook):
+            info = msg.__str__()
+            #else:
+                #info = json.dumps(message)
+            self.logger.info(str(type(msg)))
+            self.logger.info(msg)
+
             self.f.write(info + "\n")
-        # self.logger.debug(json.dumps(message, indent=2))
 
         table = message['table'] if 'table' in message else None
         action = message['action'] if 'action' in message else None
@@ -347,7 +348,7 @@ def convert_message(message, message_data):
         if message['table'] == OrderBookL2_25:
             return OrderBook(message['table'], message['action'], message_data)
         if message['table'] == Trade:
-            return message
+            return TradeInfo(message['table'], message['action'], message_data)
     return None
 
 
@@ -355,12 +356,63 @@ def convert_data(message):
     if 'table' in message and message['table'] == OrderBookL2_25 and "data" in message:
         data_obj = []
         for obj in message['data']:
-            if "price" in obj:
+            if "price" in obj and "size" in obj:
                 data_obj.append(OrderBookData(obj['symbol'], obj['id'], obj['side'], obj['size'], obj['price']))
-            else:
+            elif "size" in obj:
                 data_obj.append(OrderBookData(obj['symbol'], obj['id'], obj['side'], obj['size']))
+            else:
+                data_obj.append(OrderBookData(obj['symbol'], obj['id'], obj['side']))
         return data_obj
+
+    if 'table' in message and message['table'] == Trade and "data" in message:
+        data_obj = []
+        for obj in message['data']:
+            data_obj.append(TraderInfoData(obj['timestamp'], obj['symbol'], obj['side'], obj['size'], obj['price'],
+                                           obj['tickDirection'], obj['trdMatchID'], obj['grossValue'],
+                                           obj['homeNotional'], obj['foreignNotional']))
+        return data_obj
+
     return None
+
+
+class TradeInfo:
+    def __init__(self, table, action, data):
+        self.table = table
+        self.action = action
+        self.data = data
+
+    def __str__(self):
+        str_list = ["table," + self.table + "\n", "action," + self.action + "\n"]
+        for d in self.data:
+            str_list.append(d.__str__() + "\n")
+        return ''.join(str_list)
+
+
+class TraderInfoData:
+    def __init__(self, timestamp, symbol, side, size, price, tick_direction, trd_match_id, gross_value, home_notional, foreign_notional):
+        self.timestamp = timestamp
+        self.symbol = symbol
+        self.side = side
+        self.size = size
+        self.price = price
+        self.tick_direction = tick_direction
+        self.trd_match_id = trd_match_id
+        self.gross_value = gross_value
+        self.home_notional = home_notional
+        self.foreign_notional = foreign_notional
+
+    def __str__(self):
+        str_list = ["timestamp," + str(self.timestamp) + ",,",
+                    "symbol," + str(self.symbol) + ",,",
+                    "side," + str(self.side) + ",,",
+                    "size," + str(self.size) + ",,",
+                    "price," + str(self.price) + ",,",
+                    "tickDirection," + str(self.tick_direction) + ",,",
+                    "trdMatchID," + str(self.trd_match_id) + ",,",
+                    "grossValue," + str(self.gross_value) + ",,",
+                    "homeNotional," + str(self.home_notional) + ",,",
+                    "foreignNotional," + str(self.foreign_notional)]
+        return ''.join(str_list)
 
 
 class OrderBook:
@@ -371,7 +423,7 @@ class OrderBook:
         self.message_data = message_data
 
     def __str__(self):
-        str_list = ["time," + str(self.time) + "\n",
+        str_list = ["clientTime," + str(self.time) + "\n",
                     "table," + self.table + "\n",
                     "action," + self.action + "\n"]
         for d in self.message_data:
@@ -380,7 +432,7 @@ class OrderBook:
 
 
 class OrderBookData:
-    def __init__(self, symbol, id, side, size, price=None):
+    def __init__(self, symbol, id, side, size=None, price=None):
         self.symbol = symbol
         self.id = id
         self.side = side
@@ -390,8 +442,9 @@ class OrderBookData:
     def __str__(self):
         str_list = ["symbol," + str(self.symbol) + ",,",
                     "id," + str(self.id) + ",,",
-                    "side," + str(self.side) + ",,",
-                    "size," + str(self.size)]
+                    "side," + str(self.side)]
+        if self.size is not None:
+            str_list.append(",,size," + str(self.price))
         if self.price is not None:
             str_list.append(",,price," + str(self.price))
 

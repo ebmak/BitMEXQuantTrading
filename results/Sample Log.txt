@@ -1,0 +1,272 @@
+/anaconda3/bin/python /Users/eric/PycharmProjects/QuantDevTask/task.py
+2019-03-17 13:47:23,960 - root - INFO - Connecting to wss://www.bitmex.com/realtime?subscribe=orderBookL2_25:XBTUSD,trade:XBTUSD,instrument
+2019-03-17 13:47:23,961 - root - INFO - Started thread
+2019-03-17 13:47:25,353 - root - INFO - <class 'market_maker.ws.ws_thread.TradeInfo'>
+2019-03-17 13:47:25,353 - root - INFO - table,trade
+action,partial
+timestamp,2019-03-17T05:47:39.023Z,,symbol,XBTUSD,,side,Buy,,size,800,,price,3946,,tickDirection,ZeroPlusTick,,trdMatchID,975b0423-5419-bd15-68fb-464e7407f986,,grossValue,20273600,,homeNotional,0.202736,,foreignNotional,800
+
+2019-03-17 13:47:25,968 - root - INFO - Connected to WS. Waiting for data images, this may take a moment...
+2019-03-17 13:47:26,067 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:26,067 - root - INFO - clientTime,2019-03-17 05:47:26.067264
+table,orderBookL2_25
+action,partial
+symbol,XBTUSD,,id,8799604200,,side,Sell,,size,3958,,price,3958
+symbol,XBTUSD,,id,8799604250,,side,Sell,,size,3957.5,,price,3957.5
+symbol,XBTUSD,,id,8799604300,,side,Sell,,size,3957,,price,3957
+symbol,XBTUSD,,id,8799604350,,side,Sell,,size,3956.5,,price,3956.5
+symbol,XBTUSD,,id,8799604400,,side,Sell,,size,3956,,price,3956
+symbol,XBTUSD,,id,8799604450,,side,Sell,,size,3955.5,,price,3955.5
+symbol,XBTUSD,,id,8799604500,,side,Sell,,size,3955,,price,3955
+symbol,XBTUSD,,id,8799604550,,side,Sell,,size,3954.5,,price,3954.5
+symbol,XBTUSD,,id,8799604600,,side,Sell,,size,3954,,price,3954
+symbol,XBTUSD,,id,8799604650,,side,Sell,,size,3953.5,,price,3953.5
+symbol,XBTUSD,,id,8799604700,,side,Sell,,size,3953,,price,3953
+symbol,XBTUSD,,id,8799604750,,side,Sell,,size,3952.5,,price,3952.5
+symbol,XBTUSD,,id,8799604800,,side,Sell,,size,3952,,price,3952
+symbol,XBTUSD,,id,8799604850,,side,Sell,,size,3951.5,,price,3951.5
+symbol,XBTUSD,,id,8799604900,,side,Sell,,size,3951,,price,3951
+symbol,XBTUSD,,id,8799604950,,side,Sell,,size,3950.5,,price,3950.5
+symbol,XBTUSD,,id,8799605000,,side,Sell,,size,3950,,price,3950
+symbol,XBTUSD,,id,8799605050,,side,Sell,,size,3949.5,,price,3949.5
+symbol,XBTUSD,,id,8799605100,,side,Sell,,size,3949,,price,3949
+symbol,XBTUSD,,id,8799605150,,side,Sell,,size,3948.5,,price,3948.5
+symbol,XBTUSD,,id,8799605200,,side,Sell,,size,3948,,price,3948
+symbol,XBTUSD,,id,8799605250,,side,Sell,,size,3947.5,,price,3947.5
+symbol,XBTUSD,,id,8799605300,,side,Sell,,size,3947,,price,3947
+symbol,XBTUSD,,id,8799605350,,side,Sell,,size,3946.5,,price,3946.5
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,3946,,price,3946
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,3945.5,,price,3945.5
+symbol,XBTUSD,,id,8799605500,,side,Buy,,size,3945,,price,3945
+symbol,XBTUSD,,id,8799605550,,side,Buy,,size,3944.5,,price,3944.5
+symbol,XBTUSD,,id,8799605600,,side,Buy,,size,3944,,price,3944
+symbol,XBTUSD,,id,8799605650,,side,Buy,,size,3943.5,,price,3943.5
+symbol,XBTUSD,,id,8799605700,,side,Buy,,size,3943,,price,3943
+symbol,XBTUSD,,id,8799605750,,side,Buy,,size,3942.5,,price,3942.5
+symbol,XBTUSD,,id,8799605800,,side,Buy,,size,3942,,price,3942
+symbol,XBTUSD,,id,8799605850,,side,Buy,,size,3941.5,,price,3941.5
+symbol,XBTUSD,,id,8799605900,,side,Buy,,size,3941,,price,3941
+symbol,XBTUSD,,id,8799605950,,side,Buy,,size,3940.5,,price,3940.5
+symbol,XBTUSD,,id,8799606000,,side,Buy,,size,3940,,price,3940
+symbol,XBTUSD,,id,8799606050,,side,Buy,,size,3939.5,,price,3939.5
+symbol,XBTUSD,,id,8799606100,,side,Buy,,size,3939,,price,3939
+symbol,XBTUSD,,id,8799606150,,side,Buy,,size,3938.5,,price,3938.5
+symbol,XBTUSD,,id,8799606200,,side,Buy,,size,3938,,price,3938
+symbol,XBTUSD,,id,8799606250,,side,Buy,,size,3937.5,,price,3937.5
+symbol,XBTUSD,,id,8799606300,,side,Buy,,size,3937,,price,3937
+symbol,XBTUSD,,id,8799606350,,side,Buy,,size,3936.5,,price,3936.5
+symbol,XBTUSD,,id,8799606400,,side,Buy,,size,3936,,price,3936
+symbol,XBTUSD,,id,8799606450,,side,Buy,,size,3935.5,,price,3935.5
+symbol,XBTUSD,,id,8799606500,,side,Buy,,size,3935,,price,3935
+symbol,XBTUSD,,id,8799606550,,side,Buy,,size,3934.5,,price,3934.5
+symbol,XBTUSD,,id,8799606600,,side,Buy,,size,3934,,price,3934
+symbol,XBTUSD,,id,8799606650,,side,Buy,,size,3933.5,,price,3933.5
+
+2019-03-17 13:47:27,082 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,082 - root - INFO - clientTime,2019-03-17 05:47:27.082152
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604900,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604950,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605050,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605350,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605750,,side,Buy,,size,None
+
+2019-03-17 13:47:27,083 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,083 - root - INFO - clientTime,2019-03-17 05:47:27.083677
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604450,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604950,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605050,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605100,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605900,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605950,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606200,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606500,,side,Buy,,size,None
+
+2019-03-17 13:47:27,084 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,084 - root - INFO - clientTime,2019-03-17 05:47:27.084264
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605000,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605550,,side,Buy,,size,None
+
+2019-03-17 13:47:27,084 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,084 - root - INFO - clientTime,2019-03-17 05:47:27.084817
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605050,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605350,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605750,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605850,,side,Buy,,size,None
+
+2019-03-17 13:47:27,085 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,085 - root - INFO - clientTime,2019-03-17 05:47:27.085303
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606050,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606650,,side,Buy,,size,None
+
+2019-03-17 13:47:27,086 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,086 - root - INFO - clientTime,2019-03-17 05:47:27.086033
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605000,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605200,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605250,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605350,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605550,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605600,,side,Buy,,size,None
+
+2019-03-17 13:47:27,086 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,086 - root - INFO - clientTime,2019-03-17 05:47:27.086511
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604400,,side,Sell,,size,None
+
+2019-03-17 13:47:27,086 - root - INFO - <class 'market_maker.ws.ws_thread.TradeInfo'>
+2019-03-17 13:47:27,087 - root - INFO - table,trade
+action,insert
+timestamp,2019-03-17T05:47:40.780Z,,symbol,XBTUSD,,side,Sell,,size,3000,,price,3945.5,,tickDirection,MinusTick,,trdMatchID,05e759f1-1dbe-7949-8396-c6ba270fa824,,grossValue,76035000,,homeNotional,0.76035,,foreignNotional,3000
+
+2019-03-17 13:47:27,087 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,087 - root - INFO - clientTime,2019-03-17 05:47:27.087652
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604250,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606250,,side,Buy,,size,None
+
+2019-03-17 13:47:27,088 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,088 - root - INFO - clientTime,2019-03-17 05:47:27.088841
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604200,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604450,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604500,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604650,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604700,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604750,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604800,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604850,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605000,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605100,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605150,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605200,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605250,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606500,,side,Buy,,size,None
+
+2019-03-17 13:47:27,115 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,115 - root - INFO - clientTime,2019-03-17 05:47:27.115674
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604900,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604950,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605700,,side,Buy,,size,None
+
+2019-03-17 13:47:27,214 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,215 - root - INFO - clientTime,2019-03-17 05:47:27.214772
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604300,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604450,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604650,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604700,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605200,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605250,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+
+2019-03-17 13:47:27,394 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,394 - root - INFO - clientTime,2019-03-17 05:47:27.393926
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+
+2019-03-17 13:47:27,396 - root - INFO - <class 'market_maker.ws.ws_thread.TradeInfo'>
+2019-03-17 13:47:27,397 - root - INFO - table,trade
+action,insert
+timestamp,2019-03-17T05:47:41.197Z,,symbol,XBTUSD,,side,Sell,,size,1296,,price,3945.5,,tickDirection,ZeroMinusTick,,trdMatchID,f21728ca-6ae2-78a2-b3c3-41951f584f23,,grossValue,32847120,,homeNotional,0.3284712,,foreignNotional,1296
+timestamp,2019-03-17T05:47:41.197Z,,symbol,XBTUSD,,side,Sell,,size,3704,,price,3945.5,,tickDirection,ZeroMinusTick,,trdMatchID,7039993f-34ab-ac39-06c8-6c8be554d40f,,grossValue,93877880,,homeNotional,0.9387788,,foreignNotional,3704
+
+2019-03-17 13:47:27,412 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,412 - root - INFO - clientTime,2019-03-17 05:47:27.412546
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605800,,side,Buy,,size,None
+
+2019-03-17 13:47:27,807 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,807 - root - INFO - clientTime,2019-03-17 05:47:27.807049
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604600,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604700,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604950,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799606500,,side,Buy,,size,None
+
+2019-03-17 13:47:27,815 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,815 - root - INFO - clientTime,2019-03-17 05:47:27.815135
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799606450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606650,,side,Buy,,size,None
+
+2019-03-17 13:47:27,912 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:27,913 - root - INFO - clientTime,2019-03-17 05:47:27.912838
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604850,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605450,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605550,,side,Buy,,size,None
+
+2019-03-17 13:47:28,014 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:28,014 - root - INFO - clientTime,2019-03-17 05:47:28.014477
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605400,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605550,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799605800,,side,Buy,,size,None
+symbol,XBTUSD,,id,8799606050,,side,Buy,,size,None
+
+2019-03-17 13:47:28,116 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:28,116 - root - INFO - clientTime,2019-03-17 05:47:28.116593
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799605750,,side,Buy,,size,None
+
+2019-03-17 13:47:28,219 - root - INFO - <class 'market_maker.ws.ws_thread.OrderBook'>
+2019-03-17 13:47:28,219 - root - INFO - clientTime,2019-03-17 05:47:28.219558
+table,orderBookL2_25
+action,update
+symbol,XBTUSD,,id,8799604500,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604600,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604700,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799604800,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605000,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605050,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605100,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799605150,,side,Sell,,size,None
+symbol,XBTUSD,,id,8799606500,,side,Buy,,size,None
